@@ -28,9 +28,8 @@ def criar_paciente():
             cpf=data['cpf'],
             endereco=data.get('endereco'),
             telefone=data.get('telefone'),
-            email=data.get('email')
+            email=data.get('email') # type: ignore
         )
-        
         db.session.add(paciente)
         db.session.commit()
         
